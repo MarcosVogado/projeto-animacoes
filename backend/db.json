@@ -39,7 +39,7 @@
       "id": 7,
       "descricao": "fazer bolo",
       "categoria": "Casa",
-      "statusFinalizado": true,
+      "statusFinalizado": false,
       "prioridade": "Alta"
     },
     {
@@ -47,6 +47,13 @@
       "descricao": "programar",
       "statusFinalizado": false,
       "categoria": "Trabalho",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 9,
+      "descricao": "ir no banheiro",
+      "statusFinalizado": false,
+      "categoria": "Casa",
       "prioridade": "Alta"
     }
   ]
