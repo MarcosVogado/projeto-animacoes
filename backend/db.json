@@ -41,6 +41,13 @@
       "categoria": "Casa",
       "statusFinalizado": true,
       "prioridade": "Alta"
+    },
+    {
+      "id": 8,
+      "descricao": "programar",
+      "statusFinalizado": false,
+      "categoria": "Trabalho",
+      "prioridade": "Alta"
     }
   ]
 }
