@@ -1,20 +1,6 @@
 {
   "tarefas": [
     {
-      "id": 1,
-      "descricao": "Ir ao supermercado",
-      "categoria": "Casa",
-      "statusFinalizado": false,
-      "prioridade": "Baixa"
-    },
-    {
-      "id": 2,
-      "descricao": "Estudar sobre acessibilidade",
-      "categoria": "Trabalho",
-      "statusFinalizado": false,
-      "prioridade": "Normal"
-    },
-    {
       "id": 4,
       "descricao": "Preencher formulário de inscrição",
       "categoria": "Estudos",
@@ -53,6 +39,13 @@
       "id": 9,
       "descricao": "ir no banheiro",
       "statusFinalizado": false,
+      "categoria": "Casa",
+      "prioridade": "Alta"
+    },
+    {
+      "id": 10,
+      "descricao": "varer a casa",
+      "statusFinalizado": true,
       "categoria": "Casa",
       "prioridade": "Alta"
     }

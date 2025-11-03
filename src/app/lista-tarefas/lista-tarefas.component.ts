@@ -4,16 +4,16 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { TarefaService } from 'src/app/service/tarefa.service';
 import { Tarefa } from '../interface/tarefa';
-import { filter } from 'rxjs';
 import { checkButtonTrigger, filterTrigger, formButtonTrigger, highlightedStateTrigger, shownStateTrigger } from '../animations';
 
 @Component({
   selector: 'app-lista-tarefas',
   templateUrl: './lista-tarefas.component.html',
   styleUrls: ['./lista-tarefas.component.css'],
-  animations: [highlightedStateTrigger, 
-    shownStateTrigger, 
-    checkButtonTrigger, 
+  animations: [
+    highlightedStateTrigger,
+    shownStateTrigger,
+    checkButtonTrigger,
     filterTrigger,
     formButtonTrigger
   ]
@@ -23,9 +23,9 @@ export class ListaTarefasComponent implements OnInit {
   formAberto: boolean = false;
   categoria: string = '';
   validado: boolean = false;
-  indexTarefa = -1;
+  indexTarefa: number = -1;
   id: number = 0;
-  campoBusca: string = '';
+  campoBusca = '';
   tarefasFiltradas: Tarefa[] = [];
 
   formulario: FormGroup = this.fomBuilder.group({
@@ -47,15 +47,14 @@ export class ListaTarefasComponent implements OnInit {
       this.listaTarefas = listaTarefas;
       this.tarefasFiltradas = listaTarefas;
     });
-    return this.listaTarefas;
+    return this.tarefasFiltradas;
   }
 
-  filtrarTarefasPorDescricao(descricao: string){
-    this.campoBusca = descricao.trim().toLowerCase()
-    if(descricao){
+  filtrarTarefasPorDescricao(descricao: string) {
+    this.campoBusca = descricao.trim().toLowerCase();
+    if (descricao) {
       this.tarefasFiltradas = this.listaTarefas.filter(tarefa =>
-        tarefa.descricao.toLowerCase().includes(this.campoBusca)
-      ) 
+        tarefa.descricao.toLowerCase().includes(this.campoBusca));
     } else {
       this.tarefasFiltradas = this.listaTarefas;
     }
@@ -131,7 +130,7 @@ export class ListaTarefasComponent implements OnInit {
   }
 
   finalizarTarefa(id: number) {
-    this.id = id;
+    this.id = id
     this.service.buscarPorId(id!).subscribe((tarefa) => {
       this.service.atualizarStatusTarefa(tarefa).subscribe(() => {
         this.listarAposCheck();
