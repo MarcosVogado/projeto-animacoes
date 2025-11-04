@@ -91,13 +91,18 @@ export const formButtonTrigger = trigger('formButton', [
 
 export const noTasksTrigger = trigger('tasksState', [
   transition(':enter', [
-    // start off-screen and transparent
     style({ marginLeft: '-150px', opacity: 0 }),
-    // animate to final position/opacity
     animate('300ms ease-out', style({ marginLeft: '0', opacity: 1 }))
   ]),
   transition(':leave', [
-    // animate out
     animate('300ms ease-in', style({ marginLeft: '-150px', opacity: 0 }))
   ])
 ]);
+
+export const shakeTrigger = trigger('shakeAnimation', [
+  transition('* => *', [
+    query('input.ng-invalid:focus, select.ng-invalid:focus', [
+      animate('0.5s', style({ border: '4px solid red' }))
+    ])
+  ])
+])
