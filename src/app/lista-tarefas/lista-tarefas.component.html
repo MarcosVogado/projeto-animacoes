@@ -6,7 +6,7 @@
   </div>
   <form @shownState
     [@shakeAnimation]="formulario.value"
-    [@formButton]="formulario.valid ? 'valid' : 'invalid'"                                                                                                                       
+    [@formButton]="formulario.valid ? 'valid' : 'invalid'"
     class="formulario ff-prompt"
     [formGroup]="formulario"
     *ngIf="formAberto">
@@ -101,8 +101,8 @@
         <p class="status-tarefa">
           <button
             [ngClass]="(tarefa.statusFinalizado == true) ? 'icone-checked' : 'icone-unchecked'"
-            (click)="finalizarTarefa(tarefa.id)"
-            [@checkButton]="(tarefa.id === id ? 'checked' : 'unchecked')"
+            (click)="finalizarTarefa(tarefa)"
+            [@checkButton]="tarefa.id === id && estadoBotao"
             >
           </button>
         </p>
@@ -130,5 +130,5 @@
   </div>
 </section>
 <ng-template #semTarefas>
-  <p @tasksState class="ng-template ff-prompt">Olá! Ainda não há tarefas por aqui! :)</p>
+  <p class="ng-template ff-prompt">Olá! Ainda não há tarefas por aqui! :)</p>
 </ng-template>
