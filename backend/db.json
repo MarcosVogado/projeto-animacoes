@@ -4,14 +4,14 @@
       "id": 4,
       "descricao": "Preencher formulário de inscrição",
       "categoria": "Estudos",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "prioridade": "Normal"
     },
     {
       "id": 5,
       "descricao": "Trocar lâmpada",
       "categoria": "Casa",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "prioridade": "Alta"
     },
     {
@@ -25,7 +25,7 @@
       "id": 7,
       "descricao": "fazer bolo",
       "categoria": "Casa",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "prioridade": "Alta"
     },
     {
@@ -38,7 +38,7 @@
     {
       "id": 9,
       "descricao": "ir no banheiro",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "categoria": "Casa",
       "prioridade": "Alta"
     },
@@ -52,7 +52,7 @@
     {
       "id": 11,
       "descricao": "ghxghshxth",
-      "statusFinalizado": false,
+      "statusFinalizado": true,
       "categoria": "Casa",
       "prioridade": "Alta"
     }
