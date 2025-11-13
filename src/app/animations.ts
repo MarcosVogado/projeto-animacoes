@@ -115,7 +115,7 @@ export const shakeTrigger = trigger('shakeAnimation', [
     ], { optional: true })
   ])
 ])
-
+//Estou muito cansado hoje!
 export const listStateTrigger = trigger('listState', [
   transition('* => *', [
     query(':enter', [
